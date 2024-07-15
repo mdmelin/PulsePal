@@ -18,7 +18,7 @@ You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
 """
 
-from ArCOM import ArCom
+from .ArCOM import ArCom
 from decimal import Decimal
 import numpy as np
 import math
