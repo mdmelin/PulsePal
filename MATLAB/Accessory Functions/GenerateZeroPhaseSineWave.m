@@ -30,11 +30,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 function Wave = GenerateZeroPhaseSineWave(Frequency, Amplitude, varargin)
 global PulsePalSystem
 if nargin > 2
-    SamplingFrequency = varargin{3};
+    SamplingFrequency = varargin{1};
 else
     SamplingFrequency = PulsePalSystem.CycleFrequency/2;
 end 
 Wave = sin(pi:((2*pi)/(SamplingFrequency/Frequency)):3*pi)*Amplitude;
-if length(Wave) > 1000
-    error('Pulse Pal has insufficient memory to store one iteration of this wave.')
-end
